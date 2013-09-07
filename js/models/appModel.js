@@ -3,6 +3,10 @@ define(['underscore', 'backbone', 'collections/geneticStringCollection'],
         var AppModel = Backbone.Model.extend({
             initialize: function(){
                 this.strings = new GeneticStringCollection();
+            },
+
+            addString: function(options){
+                this.strings.add(options);
             }
         });
         return AppModel;

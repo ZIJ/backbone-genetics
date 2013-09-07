@@ -93,7 +93,23 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.editor {
+    width: 400px;
+}
 
+.editor label {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.editor input {
+    float: right;
+}
+
+.editor button {
+    float: right;
+}
 
 
 
