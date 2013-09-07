@@ -16,7 +16,13 @@ require.config({
     }
 });
 
-require(['underscore', 'backbone', 'jquery'],
-	function(_, Backbone, $){
-		console.log('app working');
+require(['underscore', 'backbone', 'jquery', 'models/appModel', 'views/appView'],
+	function(_, Backbone, $, AppModel, AppView){
+		var app =  new AppView({
+            model: new AppModel(),
+            el: 'body'
+        });
+        app.render();
+        console.log('app initialized');
+        return app;
 	});
