@@ -107,6 +107,10 @@ textarea {
     float: right;
 }
 
+.editor .actions {
+    padding-bottom: 20px;
+}
+
 .editor button {
     float: right;
 }
