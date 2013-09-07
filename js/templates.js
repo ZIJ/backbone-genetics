@@ -3,6 +3,7 @@ define(['underscore', 'jquery'],
         'use strict';
         var jst = {};
         return {
+            //returns precompiled template function or compiles it from node with corresponding data-template-name
             jst: function(name){
                 if (jst.hasOwnProperty(name)) {
                     return jst[name]

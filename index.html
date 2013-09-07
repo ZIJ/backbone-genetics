@@ -23,7 +23,21 @@
                     <input class="sequence" />
                 </label>
                 <button class="add">Add</button>
+                <table class="stringList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Sequence</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </section>
+        </script>
+
+        <script type="text/x-underscore-template" data-template-name="string">
+            <td><%= name %></td>
+            <td><%= sequence %></td>
         </script>
 
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
