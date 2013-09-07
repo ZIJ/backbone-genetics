@@ -1,8 +1,8 @@
-define(['underscore', 'backbone'],
-    function(_, Backbone){
+define(['underscore', 'backbone', 'collections/geneticStringCollection'],
+    function(_, Backbone, GeneticStringCollection){
         var AppModel = Backbone.Model.extend({
             initialize: function(){
-                console.log('app model created');
+                this.strings = new GeneticStringCollection();
             }
         });
         return AppModel;
