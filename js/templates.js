@@ -1,7 +1,7 @@
 define(['underscore', 'jquery'],
     function (_, $) {
+        'use strict';
         var jst = {};
-
         return {
             jst: function(name){
                 if (jst.hasOwnProperty(name)) {

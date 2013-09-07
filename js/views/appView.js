@@ -1,5 +1,6 @@
 define(['underscore', 'backbone', 'jquery', 'templates'],
     function(_, Backbone, $, templates){
+        'use strict';
         var AppView = Backbone.View.extend({
             template: templates.jst('mainForm'),
             initialize: function(){

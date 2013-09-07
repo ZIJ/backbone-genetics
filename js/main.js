@@ -18,6 +18,7 @@ require.config({
 
 require(['underscore', 'backbone', 'jquery', 'models/appModel', 'views/appView'],
 	function(_, Backbone, $, AppModel, AppView){
+        'use strict';
 		var app =  new AppView({
             model: new AppModel(),
             el: 'body'
