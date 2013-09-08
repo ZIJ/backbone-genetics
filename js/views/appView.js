@@ -6,7 +6,8 @@ define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringLis
 
             events: {
                 'click button.add': 'addString',
-                'click button.regenerate': 'regenerateOverlapGraph'
+                'click button.regenerate': 'regenerateOverlapGraph',
+                'input input.sequence': '_sequenceToUpperCase'
             },
 
             initialize: function(){
@@ -43,14 +44,21 @@ define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringLis
             },
 
             addString: function(){
-                this.model.addString({
+                var result = this.model.addString({
                     name: this.ui.nameInput.val(),
                     sequence: this.ui.sequenceInput.val()
                 });
+                if (result.error){
+                    alert(result.error);
+                }
             },
 
             regenerateOverlapGraph: function(){
                 this.model.regenerateOverlapGraph();
+            },
+
+            _sequenceToUpperCase: function(){
+                this.ui.sequenceInput.val(this.ui.sequenceInput.val().toUpperCase());
             }
 
         });
