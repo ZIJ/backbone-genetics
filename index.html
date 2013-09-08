@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script type="text/x-underscore-template" data-template-name="editor">
+            <section class="editor">
+                <div>
+                    <label>
+                        Name:
+                        <input class="name" />
+                    </label>
+                    <label>
+                        Sequence:
+                        <input class="sequence" />
+                    </label>
+                    <div class="actions">
+                        <button class="add">Add</button>
+                    </div>
+
+                </div>
+
+                <table class="stringList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Sequence</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <div class="actions">
+                    <button class="regenerate">Regenerate overlap graph</button>
+                </div>
+
+                <table class="overlapGraph">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Overlap graph:</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </script>
+
+        <script type="text/x-underscore-template" data-template-name="string">
+            <td><%= name %></td>
+            <td><%= sequence %></td>
+        </script>
+
+        <script type="text/x-underscore-template" data-template-name="overlap">
+            <td><%= from %></td>
+            <td><%= to %></td>
+        </script>
+
+        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/requirejs/require.js" data-main="js/main"></script>
+
+    </head>
+    <body>
+
+    </body>
+</html>
