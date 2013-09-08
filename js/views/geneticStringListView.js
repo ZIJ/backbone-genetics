@@ -1,7 +1,6 @@
 define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringView'],
     function (_, Backbone, $, templates, GeneticStringView) {
         'use strict';
-
          var GeneticStringListView = Backbone.View.extend({
 
              initialize: function(){
