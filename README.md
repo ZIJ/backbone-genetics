@@ -13,5 +13,6 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
 #### Bonus features:
   - Dynamic overlap graph generation
   - DNA strings validation
+  - Lazy templates precompilation
   - Memoized suffix and prefix extraction
 
