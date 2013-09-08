@@ -5,7 +5,8 @@ define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringLis
             template: templates.jst('editor'),
 
             events: {
-                'click button.add': 'addString'
+                'click button.add': 'addString',
+                'click button.regenerate': 'regenerateOverlapGraph'
             },
 
             initialize: function(){
@@ -35,6 +36,11 @@ define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringLis
                     name: this.ui.nameInput.val(),
                     sequence: this.ui.sequenceInput.val()
                 });
+            },
+
+            regenerateOverlapGraph: function(){
+                this.model.overlapGraph.regenerate();
+                console.log(this.model.overlapGraph);
             }
 
         });

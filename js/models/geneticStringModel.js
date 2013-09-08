@@ -3,18 +3,27 @@ define(['underscore', 'backbone'],
         'use strict';
         var GeneticStringModel = Backbone.Model.extend({
             initialize: function(){
-
+                this._prefixMemo = _.memoize(this._prefix);
+                this._suffixMemo = _.memoize(this._suffix);
             },
 
-            prefix: _.memoize(function(size){
+            _prefix: function(size){
                 var sequence = this.get('sequence');
-                return sequence.slice(0, size - 1);
-            }.bind(this)),
+                return sequence.slice(0, size);
+            },
 
-            suffix: _.memoize(function(size){
+            _suffix: function(size){
                 var sequence = this.get('sequence');
-                return sequence.slice(sequence.length - 1 - size);
-            }.bind(this))
+                return sequence.slice(sequence.length - size);
+            },
+
+            prefix: function(size){
+                return this._prefixMemo(size);
+            },
+
+            suffix: function(size){
+                return this._suffixMemo(size);
+            }
         });
         return GeneticStringModel;
     });

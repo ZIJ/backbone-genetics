@@ -95,6 +95,7 @@ textarea {
 
 .editor {
     width: 400px;
+    padding: 20px;
 }
 
 .editor label {
