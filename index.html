@@ -42,12 +42,26 @@
                 <div class="actions">
                     <button class="regenerate">Regenerate overlap graph</button>
                 </div>
+
+                <table class="overlapGraph">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Overlap graph:</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </section>
         </script>
 
         <script type="text/x-underscore-template" data-template-name="string">
             <td><%= name %></td>
             <td><%= sequence %></td>
+        </script>
+
+        <script type="text/x-underscore-template" data-template-name="overlap">
+            <td><%= from %></td>
+            <td><%= to %></td>
         </script>
 
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>

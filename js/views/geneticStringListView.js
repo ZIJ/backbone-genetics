@@ -1,16 +1,16 @@
-define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringView'],
-    function (_, Backbone, $, templates, GeneticStringView) {
+define(['underscore', 'backbone', 'jquery', 'templates', 'views/collectionView', 'views/geneticStringView'],
+    function (_, Backbone, $, templates, CollectionView, GeneticStringView) {
         'use strict';
-         var GeneticStringListView = Backbone.View.extend({
+         var GeneticStringListView = CollectionView.extend({
 
              initialize: function(){
-                 this.childViews = [];
-                 this.listenTo(this.collection, 'add', this.render.bind(this));
+                 CollectionView.prototype.initialize.apply(this, arguments);
              },
 
+             //TODO reduce boilerplate somehow
              render: function(){
                  this.ui = {
-                     tbody: this.$el.find('tbody')
+                     container: this.$el.find('tbody')
                  };
                  this.removeChildViews();
                  this.childViews = this.collection.map(function(geneticString){
@@ -19,20 +19,6 @@ define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringVie
                     });
                  });
                  this.renderChildViews();
-             },
-
-             removeChildViews: function(){
-                 this.childViews.forEach(function(view){
-                     view.remove();
-                 });
-             },
-
-             renderChildViews: function(){
-                 var listView = this;
-                 this.childViews.forEach(function(childView){
-                     childView.render();
-                     listView.ui.tbody.append(childView.el);
-                 });
              }
 
           });
