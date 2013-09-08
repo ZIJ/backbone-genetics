@@ -7,10 +7,15 @@ define(['underscore', 'backbone', 'collections/geneticStringCollection', 'models
                 this.overlapGraph = new OverlapGraphModel({},{
                     nodes: this.strings
                 });
+                this.listenTo(this.strings, 'add remove reset', this.regenerateOverlapGraph);
             },
 
             addString: function(options){
                 this.strings.add(options);
+            },
+
+            regenerateOverlapGraph: function(){
+                this.overlapGraph.regenerate();
             }
         });
         return AppModel;

@@ -50,8 +50,7 @@ define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringLis
             },
 
             regenerateOverlapGraph: function(){
-                this.model.overlapGraph.regenerate();
-                console.log(this.model.overlapGraph);
+                this.model.regenerateOverlapGraph();
             }
 
         });

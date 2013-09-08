@@ -3,6 +3,7 @@ define(['underscore', 'backbone'],
         'use strict';
         var GeneticStringModel = Backbone.Model.extend({
             initialize: function(){
+                //memoized prefix / suffix functions should belong to instances rather than prototype
                 this._prefixMemo = _.memoize(this._prefix);
                 this._suffixMemo = _.memoize(this._suffix);
             },
