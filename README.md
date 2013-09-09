@@ -8,7 +8,7 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
   - [Backbone](http://backbonejs.org) as core MV* framework
   - [Lodash](http://lodash.com) instead of [Underscore](underscorejs.org) for better performance and cross-browser consistency
   - [jQuery](http://jquery.com) for DOM manipulation in views
-  - [HTML5 Boilerplate](html5boilerplate.com) for initial page structure and common CSS rules
+  - [HTML5 Boilerplate](http://html5boilerplate.com) for initial page structure and common CSS rules
   - [Bower](http://bower.io) for bootstrapping 3rd-party dependencies
   - [Require.js](http://requirejs.org/) for dependency management and modular app structure
   - [Twitter Bootstrap](http://getbootstrap.com/) for nice-looking UI
