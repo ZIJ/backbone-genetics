@@ -1,17 +1,21 @@
-define(['underscore', 'backbone', 'models/geneticStringModel', 'collections/geneticStringCollection', 'models/overlapGraphModel'],
-    function(_, Backbone, GeneticStringModel, GeneticStringCollection, OverlapGraphModel){
+define(['underscore', 'backbone', 'config', 'models/geneticStringModel', 'collections/geneticStringCollection', 'models/overlapGraphModel'],
+    function(_, Backbone, config, GeneticStringModel, GeneticStringCollection, OverlapGraphModel){
         'use strict';
         var AppModel = Backbone.Model.extend({
             initialize: function(){
                 this.strings = new GeneticStringCollection();
-                this.overlapGraph = new OverlapGraphModel({},{
+                this.overlapGraph = new OverlapGraphModel({
+                    overlapSize: config.overlapSize
+                },{
                     nodes: this.strings
                 });
                 this.listenTo(this.strings, 'add remove reset', this.regenerateOverlapGraph);
             },
 
             addString: function(options){
-                options = options || {};
+                options = _.extend(options || {},{
+                    sequenceType: config.sequenceType
+                });
                 var newString = new GeneticStringModel(options);
                 if (!newString.isValid()){
                     return {
