@@ -3,13 +3,19 @@ define(['underscore', 'backbone'],
         'use strict';
         var GeneticStringModel = Backbone.Model.extend({
             defaults: {
-                alphabet: 'ACGT'    //ACGU for RNA strings
+                sequenceType: 'DNA'
+            },
+            alphabets: {
+                DNA: 'ACGT',                        // adenine, cytosine, guanine, thymine
+                RNA: 'ACGU',                        // adenine, cytosine, guanine, uracil
+                Peptide: 'ACDEFGHIKLMNPQRSTVWY'     // lots of nucleobases :)
             },
             initialize: function(){
+                var alphabet = this.alphabets[this.get('sequenceType')];
+                this._alphabetRegex = new RegExp('^[' + alphabet + ']+$', 'i');
                 //memoized prefix / suffix functions should belong to instances rather than prototype
                 this._prefixMemo = _.memoize(this._prefix);
                 this._suffixMemo = _.memoize(this._suffix);
-                this._alphabetRegex = new RegExp('^[' + this.get('alphabet') + ']+$', 'i');
             },
 
             validate: function(attributes){
@@ -17,7 +23,7 @@ define(['underscore', 'backbone'],
                     return 'Name cannot be empty';
                 }
                 if (!this._alphabetRegex.test(attributes.sequence)){
-                    return 'Sequence has characters other than ' + this.get('alphabet') + ' or is empty';
+                    return 'Sequence has characters not from ' + this.get('sequenceType') + ' alphabet or is empty';
                 }
             },
 
