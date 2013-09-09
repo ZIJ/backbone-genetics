@@ -11,6 +11,7 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
   - [HTML5 Boilerplate](html5boilerplate.com) for initial page structure and common CSS rules
   - [Bower](http://bower.io) for bootstrapping 3rd-party dependencies
   - [Require.js](http://requirejs.org/) for dependency management and modular app structure
+  - [Twitter Bootstrap](http://getbootstrap.com/) for nice-looking UI
 
 #### Bonus features:
   - Dynamic overlap graph generation
