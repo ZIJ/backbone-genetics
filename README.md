@@ -22,6 +22,6 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
   - Memoized suffix and prefix extraction
 
 #### What's missing:
-  - Build management. For any production app using [Grunt](http://gruntjs.org) makes linting, build targeting and automation a breeze
+  - Build management. For any production app using [Grunt](http://gruntjs.com) makes linting, build targeting and automation a breeze
   - Unit tests. A larger-scale application cannot be called robust without at least critical test coverage.
 
