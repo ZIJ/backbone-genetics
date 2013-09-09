@@ -1,10 +1,8 @@
 backbone-genetics
 =================
+####Live demo: [zij.github.io/backbone-genetics](http://zij.github.io/backbone-genetics)
 
 An application demonstrating simple MV* architecture on top of Backbone.js framework as well as one of basic algorithms in bioinformatics - [overlap graph](http://rosalind.info/problems/grph) generation.
-
-####Check it out up and running:
-#####[zij.github.io/backbone-genetics](http://zij.github.io/backbone-genetics)
 
 #### Solution stack:
   - [Backbone](http://backbonejs.org) as core MV* framework
@@ -13,6 +11,7 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
   - [HTML5 Boilerplate](html5boilerplate.com) for initial page structure and common CSS rules
   - [Bower](http://bower.io) for bootstrapping 3rd-party dependencies
   - [Require.js](http://requirejs.org/) for dependency management and modular app structure
+  - [Twitter Bootstrap](http://getbootstrap.com/) for nice-looking UI
 
 #### Bonus features:
   - Dynamic overlap graph generation
@@ -22,6 +21,6 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
   - Memoized suffix and prefix extraction
 
 #### What's missing:
-  - Build management. For any production app using [Grunt](http://gruntjs.org) makes linting, build targeting and automation a breeze
+  - Build management. For any production app using [Grunt](http://gruntjs.com) makes linting, build targeting and automation a breeze
   - Unit tests. A larger-scale application cannot be called robust without at least critical test coverage.
 

@@ -93,41 +93,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-.editor {
-    width: 400px;
-    padding: 20px;
+
+.editor.panel {
+    margin: 30px;
+    width: 30%;
 }
 
-.editor label {
-    display: block;
-    width: 100%;
-    padding: 10px;
+.editor .input-group {
+    margin-bottom: 20px;
 }
 
-.editor input {
-    float: right;
+.editor .input-group-addon  {
+    text-align: right;
+    min-width: 100px;
 }
-
-.editor .actions {
-    padding-bottom: 20px;
-}
-
-.editor button {
-    float: right;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ==========================================================================
