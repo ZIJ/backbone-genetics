@@ -3,7 +3,7 @@ define([],
         'use strict';
 
         return {
-            sequenceType: 'DNA',        //DNA, RNA or Peptide
+            sequenceType: 'DNA',        // 'DNA', 'RNA' or 'protein'
             overlapSize: 3
         };
 

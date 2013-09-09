@@ -15,7 +15,7 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
 
 #### Bonus features:
   - Dynamic overlap graph generation
-  - DNA / RNA / peptide strings validation
+  - DNA / RNA / protein strings validation
   - Centralized configuration
   - Lazy templates precompilation
   - Memoized suffix and prefix extraction

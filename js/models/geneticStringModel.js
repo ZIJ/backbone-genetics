@@ -8,7 +8,7 @@ define(['underscore', 'backbone'],
             alphabets: {
                 DNA: 'ACGT',                        // adenine, cytosine, guanine, thymine
                 RNA: 'ACGU',                        // adenine, cytosine, guanine, uracil
-                Peptide: 'ACDEFGHIKLMNPQRSTVWY'     // lots of nucleobases :)
+                protein: 'ACDEFGHIKLMNPQRSTVWY'     // lots of nucleobases :)
             },
             initialize: function(){
                 var alphabet = this.alphabets[this.get('sequenceType')];
