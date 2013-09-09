@@ -10,48 +10,45 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
 
         <script type="text/x-underscore-template" data-template-name="editor">
-            <section class="editor">
-                <div>
-                    <label>
-                        Name:
-                        <input class="name" />
-                    </label>
-                    <label>
-                        Sequence:
-                        <input class="sequence" />
-                    </label>
-                    <div class="actions">
-                        <button class="add">Add</button>
+            <div class="editor panel panel-default">
+                <div class="panel-body">
+                    <div class="input-group">
+                        <span class="input-group-addon">Name</span>
+                        <input type="text" class="name form-control" placeholder="Read1" />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">Sequence</span>
+                        <input type="text" class="sequence form-control" placeholder="ACCACTACCATAC" />
                     </div>
 
+                    <button class="add btn btn-primary btn-block">Add</button>
+
+                    <table class="stringList table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Sequence</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+                    <button class="regenerate btn btn-primary btn-block">Regenerate overlap graph</button>
+
+                    <table class="overlapGraph table table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Overlap graph:</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-
-                <table class="stringList">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Sequence</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-
-                <div class="actions">
-                    <button class="regenerate">Regenerate overlap graph</button>
-                </div>
-
-                <table class="overlapGraph">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Overlap graph:</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </section>
+            </div>
         </script>
 
         <script type="text/x-underscore-template" data-template-name="string">
@@ -66,6 +63,7 @@
 
         <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
         <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/requirejs/require.js" data-main="js/main"></script>
 
     </head>
