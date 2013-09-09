@@ -97,6 +97,7 @@ textarea {
 .editor.panel {
     margin: 30px;
     width: 30%;
+    min-width: 300px;
 }
 
 .editor .input-group {
