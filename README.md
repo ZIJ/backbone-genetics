@@ -1,10 +1,8 @@
 backbone-genetics
 =================
+#####Live demo: [zij.github.io/backbone-genetics](http://zij.github.io/backbone-genetics)
 
 An application demonstrating simple MV* architecture on top of Backbone.js framework as well as one of basic algorithms in bioinformatics - [overlap graph](http://rosalind.info/problems/grph) generation.
-
-####Check it out up and running:
-#####[zij.github.io/backbone-genetics](http://zij.github.io/backbone-genetics)
 
 #### Solution stack:
   - [Backbone](http://backbonejs.org) as core MV* framework
