@@ -1,5 +1,5 @@
-define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringListView', 'views/overlapGraphView'],
-    function(_, Backbone, $, templates, GeneticStringListView, OverlapGraphView){
+define(['underscore', 'backbone', 'jquery', 'templates', 'views/collectionView', 'views/geneticStringView', 'views/overlapView'],
+    function(_, Backbone, $, templates, CollectionView, GeneticStringView, OverlapView){
         'use strict';
         var AppView = Backbone.View.extend({
             template: templates.jst('editor'),
@@ -27,18 +27,22 @@ define(['underscore', 'backbone', 'jquery', 'templates', 'views/geneticStringLis
                 if (this.stringList){
                     this.stringList.remove();
                 }
-                this.stringList = new GeneticStringListView({
+                this.stringList = new CollectionView({
                     collection: this.model.strings,
-                    el: this.ui.stringList
+                    itemView: GeneticStringView,
+                    el: this.ui.stringList,
+                    container: 'tbody'
                 });
                 this.stringList.render();
                 //rendering overlap graph
                 if (this.overlapGraph){
                     this.overlapGraph.remove();
                 }
-                this.overlapGraph = new OverlapGraphView({
+                this.overlapGraph = new CollectionView({
                     collection: this.model.overlapGraph.edges,
-                    el: this.ui.overlapGraph
+                    itemView: OverlapView,
+                    el: this.ui.overlapGraph,
+                    container: 'tbody'
                 });
                 this.overlapGraph.render();
             },
