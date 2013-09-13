@@ -13,7 +13,7 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
   - [Require.js](http://requirejs.org/) for dependency management and modular app structure
   - [Twitter Bootstrap](http://getbootstrap.com/) for nice-looking UI
 
-![App UI](/img/screenshot.png)
+[![App UI](/img/screenshot.png)](http://zij.github.io/backbone-genetics)
 
 #### Bonus features:
   - Dynamic overlap graph generation
