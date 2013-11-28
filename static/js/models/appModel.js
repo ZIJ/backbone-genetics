@@ -32,6 +32,8 @@ define(['underscore', 'backbone', 'config', 'models/geneticStringModel', 'collec
                         error: 'String with such name already exists'
                     };
                 }
+                newString.url = '/string';
+                newString.save();
                 this.strings.add(newString);
                 return {
                     success: true
