@@ -34,6 +34,11 @@ app.get('/strings', function(req, res){
     });
 });
 
+app.del('/string/:id', function(req, res){
+    GeneticString.findByIdAndRemove(req.params.id, function(){
+        res.send();
+    });
+});
 
 app.listen(port, function() {
     console.log("Listening on " + port);

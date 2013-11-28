@@ -4,6 +4,8 @@ define(['underscore', 'backbone', 'config', 'models/geneticStringModel', 'collec
         var AppModel = Backbone.Model.extend({
             initialize: function(){
                 this.strings = new GeneticStringCollection();
+                this.strings.url = '/strings';
+                this.strings.fetch();
                 this.overlapGraph = new OverlapGraphModel({
                     overlapSize: config.overlapSize
                 },{
