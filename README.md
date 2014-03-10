@@ -13,6 +13,7 @@ An application demonstrating simple MV* architecture on top of Backbone.js frame
   - [Bower](http://bower.io) for bootstrapping 3rd-party dependencies
   - [Require.js](http://requirejs.org/) for dependency management and modular app structure
   - [Twitter Bootstrap](http://getbootstrap.com/) for nice-looking UI
+  
 ###### Backend
   - [Node.js](http://nodejs.org/)
   - [Express](http://expressjs.com/)
